@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Department {
-	
+
 	private String name;
 	private int payday;
-	
+
 	private Address address;
-	
+
 	private List<Employee> employees = new ArrayList<>();
-	
-	public Department() {	
+
+	public Department() {
 	}
 
-	public Department(String name, int payday,  Address address) {
+	public Department(String name, int payday, Address address) {
 		this.name = name;
 		this.payday = payday;
 		this.address = address;
@@ -48,47 +48,24 @@ public class Department {
 	public List<Employee> getEmployees() {
 		return employees;
 	}
-	
-	public void addEmployee (Employee employee) {
+
+	public void addEmployee(Employee employee) {
 		employees.add(employee);
 	}
-	
-	public void removeEmployee (Employee employee) {
+
+	public void removeEmployee(Employee employee) {
 		employees.remove(employee);
 	}
-	
-	//public double payroll() {
-	  // double result = 0.0;
-	 //  for (Employee employee : employees ) {  //get busca,  set troca
-		// result +=  employee.getSalary();
-	//   } 
-  
-	//return result;
-	//}
-	
-	
-	
-	public static double payroll(Department dep ) {
-		   double result = 0.0;
-		   for (Employee employee : dep.getEmployees()) {  //get busca,  set troca
-			 result +=  employee.getSalary();
-		   }
-	  
-		return result;
+
+	public static double payroll(Department dep) {
+		double result = 0.0;
+		for (Employee employee : dep.getEmployees()) { // get busca, set troca
+			result += employee.getSalary();
 		}
 
-	@Override
-	public String toString() {
-		return "Department [name=" + name + ", payday=" + payday + ", address=" + address + ", employees=" + employees
-				+ ", getName()=" + getName() + ", getPayday()=" + getPayday() + ", getAddress()=" + getAddress()
-				+ ", getEmployees()=" + getEmployees() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
+		return result;
 	}
-	
+
 }
 
 // payroll = folha de pagamento
-
-
-
-

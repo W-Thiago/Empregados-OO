@@ -30,19 +30,6 @@ public class Address {
 		this.phone = phone;
 	}
 
-	@Override
-	public String toString() {
-		return "Address [email=" + email + ", phone=" + phone + ", getEmail()=" + getEmail() + ", getPhone()="
-				+ getPhone() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
-				+ super.toString() + "]";
-	}
-	
-	
-	
-	
-	
-
 }
 
 
-// address = Morada
